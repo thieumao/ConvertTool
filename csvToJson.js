@@ -24,8 +24,9 @@ function changeValuesByPath(object, nodes) {
 
 const writeJsonFile = async () => {
   const csv = await readFileAsync('./en.csv', 'utf8');
-  let viJson = await readFileAsync('./vi.Json', 'utf8');
-  viJson = JSON.parse(viJson);
+  // let viJson = await readFileAsync('./vi.Json', 'utf8');
+  // viJson = JSON.parse(viJson);
+  let viJson = {}
   let nodes = jp.apply(viJson, `$..*`, function(value) { return value });
   const arr = csv.split("\r\n");
 
@@ -41,7 +42,7 @@ const writeJsonFile = async () => {
   }
   changeValuesByPath(viJson, nodes);
   // console.log(viJson);
-  await writeFileAsync('./vi2.json', JSON.stringify(viJson));
+  await writeFileAsync('./vi.json', JSON.stringify(viJson));
 }
 
 writeJsonFile();
