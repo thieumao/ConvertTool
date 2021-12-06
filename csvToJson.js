@@ -34,7 +34,7 @@ const writeJsonFile = async () => {
     const line = arr[index];
     const lineArr = line.split(",");
     const key = lineArr[0];
-    const enValue = lineArr[1];
+    const enValue = lineArr[1].replace('"',"").replace('"',"");
     const viValue = lineArr.length >= 2 ? lineArr[2] : '';
     let keyArr = key.replace('"',"").replace('"',"").split('/');
     _.set(viJson, keyArr, enValue);
