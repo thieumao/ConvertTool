@@ -1,26 +1,32 @@
+const _ = require('lodash');
+const jp = require('jsonpath');
+
 const fs = require('fs')
 const { promisify } = require('util')
 
-const readFileAsync = promisify(fs.readFile)
-const writeFileAsync = promisify(fs.writeFile)
+const readFileAsync = promisify(fs.readFile);
+const writeFileAsync = promisify(fs.writeFile);
 
-// let dataArray = [];
-// function printObj(obj, id) {
-//   for (var key in obj) {
-//     const currentId = id ? id + '/' + key : key;
-//     var value = obj[key];
-//     if (typeof value === 'object') {
-//       printObj(value, currentId);
-//     } else {
-//       // console.log(currentId + ' > '+ value);
-//       dataArray.push(`"${currentId}","${value}"`);
-//     }
-//   }
-// }
+function chnageValueByPath(object, path, value) {
+  if(Array.isArray(path) && path[0] === '$') {
+       const pathWithoutFirstElement = path.slice(1);
+       _.set(object, pathWithoutFirstElement, value);
+  }
+}
 
-const readJsonFile = async () => {
+function changeValuesByPath(object, nodes) {
+   nodes.forEach((node)=> {
+       chnageValueByPath(object, node.path, node.value);
+   })
+
+   return object;
+}
+
+const writeJsonFile = async () => {
   const csv = await readFileAsync('./en.csv', 'utf8');
-  const viJson = await readFileAsync('./vi.Json', 'utf8');
+  let viJson = await readFileAsync('./vi.Json', 'utf8');
+  viJson = JSON.parse(viJson);
+  let nodes = jp.apply(viJson, `$..*`, function(value) { return value });
   const arr = csv.split("\r\n");
 
   for (const index in arr) {
@@ -29,15 +35,13 @@ const readJsonFile = async () => {
     const key = lineArr[0];
     const enValue = lineArr[1];
     const viValue = lineArr.length >= 2 ? lineArr[2] : '';
-    const keyArr = key.replace('"',"").split('/');
-    console.log(keyArr);
+    let keyArr = key.replace('"',"").replace('"',"").split('/');
+    _.set(viJson, keyArr, enValue);
+    // _.set(nodes, keyArr, 'Thieu Mao');
   }
-  // await writeFileAsync('./en.csv', csv);
-  // printObj(JSON.parse(data), '');
-  // const header = 'Key,English Version,Vietnamese Version\r\n';
-  // const csv = header + dataArray.join('\r\n');
-  // console.log(csv);
-  // await writeFileAsync('./en.csv', csv);
+  changeValuesByPath(viJson, nodes);
+  // console.log(viJson);
+  await writeFileAsync('./vi2.json', JSON.stringify(viJson));
 }
 
-readJsonFile();
+writeJsonFile();
