@@ -46,7 +46,9 @@ const writeJsonFile = async () => {
       viValue = viValue.replace('"',"").replace('"',"");
     }
     let value = rephraseValue || viValue;
-    _.set(viJson, keyArr, value);
+    if (value) {
+      _.set(viJson, keyArr, value);
+    }
     // _.set(nodes, keyArr, 'Thieu Mao');
   }
   changeValuesByPath(viJson, nodes);

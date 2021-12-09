@@ -16,10 +16,6 @@
     "myMenu": "Thực đơn của tôi",
     "myOrders": "Đơn đặt hàng của tôi",
     "myOutlet": "Cửa hàng của tôi",
-    "outletAddress": "",
-    "openingHours": "",
-    "deliveryOptions": "",
-    "paymentOptions": "",
     "myUsers": "Người dùng của tôi",
     "faqs": "Câu hỏi thường gặp",
     "language": "Ngôn ngữ",
@@ -37,13 +33,13 @@
     "register": "Đăng ký ở đây",
     "placeholderPhone": "Số điện thoại di động của bạn",
     "placeholderPass": "Mật khẩu của bạn",
-    "accountHasBeenDeactivated": "",
     "phoneNumberFormatError": "Số điện thoại chỉ có thể có 10 chữ số.",
     "passwordFormatError": " 1 lower case",
     "loginError": "Vui lòng kiểm tra điện thoại hoặc mật khẩu của bạn."
   },
   "forgotPassword": {
     "title": "QUÊN MẬT KHẨU",
+    "description": "Hãy để chúng tôi giúp bạn tạo lại mật khẩu mới!\nVui lòng nhập số điện thoại của bạn để xác minh.",
     "phone": "Số điện thoại",
     "continue": "Tiếp tục",
     "login": "Đăng nhập tại đây",
@@ -99,11 +95,12 @@
   "setupPasswordCompleted": {
     "registrationCompletedTitle": "ĐÃ ĐĂNG KÝ HOÀN TẤT",
     "passwordResetCompletedTitle": "ĐẶT LẠI MẬT KHẨU HOÀN TẤT",
+    "registrationCompletedContent": " bạn có thể đăng nhập vào UMenu.",
+    "passwordResetCompletedContent": " bạn có thể đăng nhập vào UMenu.",
     "getStarted": "Hãy bắt đầu nào!",
     "login": "Đăng nhập",
     "congratulation": "Chúc mừng"
   },
-  "Bây giờ": "",
   "home": {
     "welcome": "Xin chào",
     "myMenu": "THỰC ĐƠN CỦA TÔI",
@@ -119,9 +116,8 @@
     "copyright": "© 2021 Quyền tác giả Heineken. Đã đăng ký bản quyền tác giả"
   },
   "myOutlet": {
-    "myOutlet": "",
     "basicInformation": {
-      "title": "ĐỊA CHỈ",
+      "title": "ĐỊA CHỈ CỬA HÀNG ",
       "outletName": "Tên cửa hàng",
       "city": "Thành phố",
       "district": "Quận",
@@ -161,7 +157,7 @@
       "atLeastOneOption": "Vui lòng chọn ít nhất một lựa chọn"
     },
     "deliveryOptions": {
-      "title": "GIAO HÀNG",
+      "title": "CÁC LỰA CHỌN GIAO HÀNG",
       "enablePickup": "Nhận hàng tại cửa hàng",
       "readyIn": "Sẵn sàng trong",
       "minutes": "phút",
@@ -186,7 +182,7 @@
       "emptyDiscount": "Vui lòng nhập giãm giá (%)"
     },
     "paymentOptions": {
-      "title": "THANH TOÁN",
+      "title": "PHƯƠNG THỨC THANH TOÁN",
       "outletInfoUpdated": "Thông tin cửa hàng đã được cập nhật. Vui lòng tiếp tục và thêm thực đơn của bạn.",
       "epayRegister": "Nếu bạn hiện không có tài khoản",
       "signUpHere": "đăng ký tại đây",
@@ -230,7 +226,6 @@
     },
     "all": {
       "title": "ĐƠN HÀNG CỦA TÔI",
-      "gift": "",
       "filter": "Bộ lọc",
       "sort": "Sắp xếp",
       "searchOrder": "Tìm kiếm đơn hàng...",
@@ -305,8 +300,7 @@
       "completeOrder": "Đơn hàng thành công",
       "completedOn": "Đơn hàng này thành công vào lúc",
       "cancelledOn": "Đơn hàng này bị hủy vào lúc",
-      "rejectedOn": "Đơn hàng này bị cửa hàng từ chối vào lúc",
-      "changeStatusError": ""
+      "rejectedOn": "Đơn hàng này bị cửa hàng từ chối vào lúc"
     },
     "rejectPopup": {
       "title": "Từ chối đơn đặt hàng này?",
@@ -327,7 +321,6 @@
   },
   "FAQ": {
     "submitButton": "Gửi câu hỏi của bạn",
-    "chatZalo": "",
     "title": "Các câu hỏi thường gặp:",
     "QuestionTitle": "GỬI CÂU HỎI",
     "questionRelated": "Câu hỏi của bạn có liên quan đến ",
@@ -491,71 +484,6 @@
       "title": "Quản lý các chương trình khuyến mãi của bạn tại đây",
       "titleGift": "QUÀ TẶNG KHI MUA",
       "desGift": "Thiết lập để cung cấp những quà tặng miễn phí với mỗi lần mua hàng"
-    },
-    "listGift": {
-      "titleHeader": "",
-      "titleNoGift": "",
-      "desNoGift1": "",
-      "desNoGift2": "",
-      "createGift": "",
-      "all": "",
-      "active": "",
-      "inactive": "",
-      "activeTab": "",
-      "inactiveTab": "",
-      "from": "",
-      "to": ""
-    },
-    "selectMenu": {
-      "titleHeader": "",
-      "select": ""
-    },
-    "currentGift": {
-      "titleCreate": "",
-      "titleEdit": "",
-      "giftInfo": "",
-      "giftName": "",
-      "placeHolderGiftName": "",
-      "des": "",
-      "placeHolderGiftDes": "",
-      "applicableProducts": "",
-      "giftProducts": "",
-      "selectProduct": "",
-      "selectMoreProduct": "",
-      "selectProductGift": "",
-      "selectMoreProductGift": "",
-      "selectGift": "",
-      "notSelectMsg": "",
-      "plsSelectMore": "",
-      "plsSelectMoreGift": "",
-      "quantity": "",
-      "selectFromMenu": "",
-      "addNew": "",
-      "titleSelect": "",
-      "titleAdd": "",
-      "desSelect": "",
-      "desAdd": "",
-      "gotIt": "",
-      "conditions": "",
-      "limitgift": "",
-      "limitUses": "",
-      "placeholderMaxGift": "",
-      "placeholderMaxUses": "",
-      "validityPeriod": "",
-      "startDate": "",
-      "endDate": ""
-    },
-    "selectProductScreen": {
-      "headerTitle": "",
-      "selected": ""
-    },
-    "addNewGift": {
-      "headerTitle": "",
-      "productImage": "",
-      "productName": "",
-      "placeHolderName": "",
-      "add": "",
-      "errorInputName": ""
     }
   },
   "adminUsers": {
@@ -698,53 +626,7 @@
     "performance": "HIỆU SUẤT"
   },
   "hcsOutletList": {
-    "title": "CÁC CỬA HÀNG VỚI THỰC ĐƠN",
-    "activeMenu": "",
-    "search": "",
-    "filter": "",
-    "sort": "",
-    "noOutletFound": ""
-  },
-  "hcsOutletListFilter": {
-    "title": "",
-    "city": "",
-    "selected": "",
-    "districts": "",
-    "selectDistricts": "",
-    "districtSelected": "",
-    "districtPopupTitle": "",
-    "select": "",
-    "clear": "",
-    "apply": ""
-  },
-  "hcsOutletListSort": {
-    "title": "",
-    "outletName": "",
-    "aZ": "",
-    "zA": "",
-    "numberOfMenus": "",
-    "ascending": "",
-    "descending": "",
-    "clear": "",
-    "apply": ""
-  },
-  "hcsMenuList": {
-    "des": ""
-  },
-  "hscPerformance": {
-    "performance": "",
-    "myPerformance": "",
-    "myStanding": "",
-    "selectDateRange": "",
-    "from": "",
-    "to": "",
-    "menu": "",
-    "orders": "",
-    "sales": "",
-    "total": "",
-    "topStandingsThisWeek": "",
-    "myRank": "",
-    "getDataError": ""
+    "title": "CÁC CỬA HÀNG VỚI THỰC ĐƠN"
   },
   "ocsSideMenu": {
     "menus": "Các thực đơn",
