@@ -19,13 +19,13 @@ function printObj(obj, id) {
 }
 
 const readJsonFile = async () => {
-  const data = await readFileAsync('./vi.json', 'utf8');
+  const data = await readFileAsync('./en.json', 'utf8');
   printObj(JSON.parse(data), '');
   // const header = 'Key,English Version,Vietnamese Version\r\n';
   // const csv = header + dataArray.join('\r\n');
   const csv = dataArray.join('\r\n');
   console.log(csv);
-  await writeFileAsync('./vi.csv', csv, 'utf8');
+  await writeFileAsync('./en.csv', csv, 'utf8');
 }
 
 readJsonFile();
