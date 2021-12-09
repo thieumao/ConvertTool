@@ -241,6 +241,7 @@
         },
         "all": {
             "title": "MY ORDERS",
+            "gift": "[Gift]",
             "filter": "Filter",
             "sort": "Sort",
             "searchOrder": "Search order...",
