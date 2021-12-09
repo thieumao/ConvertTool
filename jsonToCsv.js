@@ -25,7 +25,7 @@ const readJsonFile = async () => {
   // const csv = header + dataArray.join('\r\n');
   const csv = dataArray.join('\r\n');
   console.log(csv);
-  await writeFileAsync('./en.csv', csv);
+  await writeFileAsync('./en.csv', csv, 'utf8');
 }
 
 readJsonFile();
