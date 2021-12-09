@@ -45,13 +45,14 @@ const readJsonFile = async () => {
       id: item1.id,
       english: item1.value,
       vietnamese: obj?.value || '',
+      rephrase: '',
     }
     return newObj;
   });
 
-  const arr = mergeDataArray.map(item => `"${item.id}","${item.english}","${item.vietnamese}"`);
+  const arr = mergeDataArray.map(item => `"${item.id}","${item.english}","${item.vietnamese}","${item.rephrase}"`);
   const csv = arr.join('\r\n');
-  await writeFileAsync('./mobile.csv', csv, 'utf8');
+  await writeFileAsync('./mobile2.csv', csv, 'utf8');
 }
 
 readJsonFile();
